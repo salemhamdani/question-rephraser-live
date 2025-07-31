@@ -370,7 +370,7 @@ def main():
     # Title and description
     st.title("🔄 Question Rephraser Chat")
     st.markdown("""
-    Transform disfluent questions into clean, well-formed questions using pre-trained BART and T5 models from Hugging Face Hub (with local fallback).
+    Transform disfluent questions into clean, well-formed questions using fine-tuned BART from Hugging Face Hub (with local fallback).
     
     **Examples of disfluent questions:**
     - "What do petrologists no what do unstable isotope studies indicate?"
@@ -465,7 +465,7 @@ def main():
                 st.session_state.current_tokenizer = tokenizer
                 st.session_state.current_model_type = model_type
                 st.session_state.current_model_name = selected_model_name
-                st.success(f"✅ {selected_model_name} loaded successfully!", icon="✅")
+                st.success(f"✅ {selected_model_name} loaded successfully!")
             else:
                 st.error("❌ Failed to load model")
                 return
